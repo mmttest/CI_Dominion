@@ -18,8 +18,8 @@ import com.MMT.DP.DriverManegment.DriverManager;
 import com.MMT.DP.FrameWorkConstant.Paths;
 
 public class TeacherFormObject {
-	
-	
+
+
 	@FindBy (xpath = "//*[@id=\"BtnBrowseHidden\"]")
 	private static WebElement UploadImage;
 	@FindBy (xpath = "//input[@placeholder='Enter First Name']")
@@ -118,17 +118,17 @@ public class TeacherFormObject {
 	private static WebElement TermCheckBox ;
 	@FindBy (xpath = "//input[@type='submit']")
 	private static WebElement Submit ;
-	
-	
+
+
 	// marketing site
-	
+
 	@FindBy (xpath = "//a[text()='Apply ']")
 	private static WebElement Apply ;
 	@FindBy (xpath = "//a[text()='Teacher Application']")
 	private static WebElement Parent_Application ;
 	@FindBy (xpath = "//a[text()='Login']")
 	private static WebElement Login_Application;
-	
+
 	// Main Application
 	@FindBy( xpath = "//input[@placeholder='Enter your email or username']" )
 	private static WebElement User_Name;
@@ -138,18 +138,22 @@ public class TeacherFormObject {
 	private static WebElement Login_Button;
 	@FindBy (xpath="//p[contains(text(),'Teacher Received')]//parent::div/h3")
 	private static WebElement ParentReceivedNumber;
-	
+
+	// After Login validation message
+	@FindBy (xpath = "//p[text()='Teacher added successfully.']")
+	private static WebElement Succesfull_message ;
+
 	static int Intitial_Teacher_DashBoard_Number;
 	static int Increse__Teacher_DashBoard_Number;
-	
+
 
 	public TeacherFormObject() {
 		PageFactory.initElements(DriverManager.getDriverRef(), this);
 	}
-	
-	
+
+
 	public void TeacherFormSubmit(HashMap<String,String> map) throws InterruptedException {
-		
+
 		Login_Application.click();
 		Set<String> Window_handel1 = DriverManager.getDriverRef().getWindowHandles();
 		Iterator<String> it1 =Window_handel1.iterator();
@@ -159,16 +163,16 @@ public class TeacherFormObject {
 		User_Name.sendKeys("doe@gmail.com");
 		Password.sendKeys("password@123");
 		Login_Button.click();
-		
+
 		String NumberS = ParentReceivedNumber.getText();
 		Intitial_Teacher_DashBoard_Number = Integer.parseInt(NumberS);
 		Increse__Teacher_DashBoard_Number= Intitial_Teacher_DashBoard_Number+1;
 		System.out.println("The number is:- "+ Intitial_Teacher_DashBoard_Number);
 		DriverManager.getDriverRef().close();
-		
+
 		DriverManager.getDriverRef().switchTo().window(Parent_Window1);
-		
-		
+
+
 		Apply.click();
 		Parent_Application.click();
 		Set<String> Window_handel2 = DriverManager.getDriverRef().getWindowHandles();
@@ -180,8 +184,8 @@ public class TeacherFormObject {
 		UploadImage.sendKeys(file.toString());
 		FirstName.sendKeys(map.get("FirstName"));
 		LastName.sendKeys(map.get("LastName"));
-        JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriverRef();
-        js.executeScript("window.scrollBy(0,300)", "");
+		JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriverRef();
+		js.executeScript("window.scrollBy(0,300)", "");
 		GenderList.click();
 		GenderSelect.click();
 		Email.sendKeys(map.get("Email"));
@@ -202,7 +206,7 @@ public class TeacherFormObject {
 		Home_State_Select.click();
 		Thread.sleep(2000);
 		Home_City.click();
-	    Home_City_Select.click();
+		Home_City_Select.click();
 		Home_ZipCode.sendKeys("98765");
 		js.executeScript("window.scrollBy(0,500)", "");
 		Office_Name.sendKeys("Test_Office");
@@ -236,40 +240,41 @@ public class TeacherFormObject {
 		Legal_Altercation_Textarea.click();
 		Legal_Altercation_Textarea.sendKeys("Test_ Legal_Altercation_Textarea_ Legal_Altercation_Textarea_ Legal_Altercation_Textarea");
 		TermCheckBox.click();
-		//Submit.click();
+		Submit.click();
+		boolean SuccessfullMesssage = Succesfull_message.isDisplayed();
+		Assert.assertEquals(SuccessfullMesssage, true);
 		
 		DriverManager.getDriverRef().close();
-		
 		DriverManager.getDriverRef().switchTo().window(Parent_Window2);
-		
+
 		Login_Application.click();
 		Set<String> Window_handel3 = DriverManager.getDriverRef().getWindowHandles();
 		Iterator<String> it3 =Window_handel3.iterator();
 		String Parent_Window3 = it3.next();
 		String Child_Window3 = it3.next();
 		DriverManager.getDriverRef().switchTo().window(Child_Window3);
-		
+
 		//Thread.sleep(5000);
 		//User_Name.sendKeys("doe@gmail.com");
 		//Thread.sleep(2000);
 		//Password.sendKeys("password@123");
 		//Thread.sleep(500000);
 		//Login_Button.click();
-		
-		
-		
+
+
+
 		String Number_Incremented = ParentReceivedNumber.getText();
 		int Increse_Real_Parent_DashBoard_Number = Integer.parseInt(Number_Incremented);
 
 		if(Increse_Real_Parent_DashBoard_Number == Increse__Teacher_DashBoard_Number) {
-			System.out.println("TestDone");
+			System.out.println("TestDone" + Increse_Real_Parent_DashBoard_Number);
 		}else {
 			Assert.fail("The dashboard is not updated");
 		} 
 
 	}
-	
-	
-	
-	
+
+
+
+
 }

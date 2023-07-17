@@ -122,6 +122,13 @@ public class ParentFormObject {
 	private static WebElement Parent_Application ;
 
 
+	// After Login
+	
+	@FindBy (xpath = "//p[text()='Parent added successfully.']")
+	private static WebElement Succesfull_message ;
+	
+	
+	
 	public ParentFormObject() {
 		PageFactory.initElements(DriverManager.getDriverRef(), this);
 	}
