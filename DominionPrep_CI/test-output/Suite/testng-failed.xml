@@ -6,15 +6,9 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestCase.Parent_Form">
-        <methods>
-          <include name="QuitDriver"/>
-          <include name="InitialMethod"/>
-          <include name="FillupForm_Parent" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- TestCase.Parent_Form -->
       <class name="TestCase.Teacher_Form">
         <methods>
+          <include name="QuitDriver"/>
           <include name="FillupForm_Teacher" invocation-numbers="0"/>
           <include name="InitialMethod"/>
         </methods>

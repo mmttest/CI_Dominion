@@ -22,8 +22,8 @@ public class DriverClass {
 			DriverManager.getDriverRef().get(ConfigFileClass.setProperty(URL));
 			DriverManager.getDriverRef().manage().window().maximize();
 			DriverManager.getDriverRef().manage().deleteAllCookies();
-			DriverManager.getDriverRef().manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
-			DriverManager.getDriverRef().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+			DriverManager.getDriverRef().manage().timeouts().implicitlyWait(Duration.ofSeconds(90));
+			DriverManager.getDriverRef().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(600));
 
 
 		}

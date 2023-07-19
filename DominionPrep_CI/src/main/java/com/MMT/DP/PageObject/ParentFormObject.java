@@ -15,6 +15,7 @@ import com.MMT.DP.FrameWorkConstant.Paths;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class ParentFormObject {
 
@@ -113,6 +114,20 @@ public class ParentFormObject {
 	private static WebElement TermCheckBox ;
 	@FindBy (xpath = "//input[@type='submit']")
 	private static WebElement Submit ;
+	
+	
+	//main site
+	// Main Application
+	@FindBy( xpath = "//input[@placeholder='Enter your email or username']" )
+	private static WebElement User_Name;
+	@FindBy( xpath = "//input[@placeholder='Enter your password']" )
+	private static WebElement Password;
+	@FindBy( xpath = "//input[@type='submit']" )
+	private static WebElement Login_Button;
+	@FindBy (xpath="//p[contains(text(),'Parents Received')]//parent::div/h3")
+	private static WebElement ParentReceivedNumber;
+	
+	
 
 	// marketing site
 	
@@ -120,6 +135,8 @@ public class ParentFormObject {
 	private static WebElement Apply ;
 	@FindBy (xpath = "//a[text()='Parent Application']")
 	private static WebElement Parent_Application ;
+	@FindBy (xpath = "//a[text()='Login']")
+	private static WebElement Login_Application;
 
 
 	// After Login
@@ -127,6 +144,9 @@ public class ParentFormObject {
 	@FindBy (xpath = "//p[text()='Parent added successfully.']")
 	private static WebElement Succesfull_message ;
 	
+	
+	static int Intitial_Parent_DashBoard_Number;
+	static int Increse__Parent_DashBoard_Number;
 	
 	
 	public ParentFormObject() {
@@ -136,13 +156,35 @@ public class ParentFormObject {
 
 	public void ParentFormSubmit(HashMap<String,String> map) throws InterruptedException {
 		
+		Login_Application.click();
+		Set<String> Window_handel1 = DriverManager.getDriverRef().getWindowHandles();
+		Iterator<String> it1 =Window_handel1.iterator();
+		String Parent_Window1 = it1.next();
+		String Child_Window1 = it1.next();
+		DriverManager.getDriverRef().switchTo().window(Child_Window1);
+		User_Name.sendKeys("doe@gmail.com");
+		Password.sendKeys("password@123");
+		Login_Button.click();
+		
+		String NumberS = ParentReceivedNumber.getText();
+		Intitial_Parent_DashBoard_Number = Integer.parseInt(NumberS);
+		Increse__Parent_DashBoard_Number= Intitial_Parent_DashBoard_Number+1;
+		System.out.println("The number is:- "+ Intitial_Parent_DashBoard_Number);
+		DriverManager.getDriverRef().close();
+
+		DriverManager.getDriverRef().switchTo().window(Parent_Window1);
+		
+		
 		Apply.click();
 		Parent_Application.click();
-		Set<String> Window_handel = DriverManager.getDriverRef().getWindowHandles();
-		Iterator<String> it =Window_handel.iterator();
-		String Parent_Window = it.next();
-		String Child_Window = it.next();
-		DriverManager.getDriverRef().switchTo().window(Child_Window);
+		Set<String> Window_handel2 = DriverManager.getDriverRef().getWindowHandles();
+		Iterator<String> it2 =Window_handel2.iterator();
+		String Parent_Window2 = it2.next();
+		String Child_Window2 = it2.next();
+		DriverManager.getDriverRef().switchTo().window(Child_Window2);
+
+		
+		
 		File file = new File(new File(Paths.getDemo_PARENT_PROFILE_Image()).getAbsolutePath());		
 		UploadImage.sendKeys(file.toString());
 		FirstName.sendKeys(map.get("FirstName"));
@@ -199,8 +241,30 @@ public class ParentFormObject {
 		Legal_Altercation_Textarea.sendKeys("Test_ Legal_Altercation_Textarea_ Legal_Altercation_Textarea_ Legal_Altercation_Textarea");
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		TermCheckBox.click();
-		//Submit.click();
+		Submit.click();
+		
+		boolean SuccessfullMesssage = Succesfull_message.isDisplayed();
+		Assert.assertEquals(SuccessfullMesssage, true);
+		
+		DriverManager.getDriverRef().close();
+		DriverManager.getDriverRef().switchTo().window(Parent_Window2);
+		
+		Login_Application.click();
+		Set<String> Window_handel3 = DriverManager.getDriverRef().getWindowHandles();
+		Iterator<String> it3 =Window_handel3.iterator();
+		String Parent_Window3 = it3.next();
+		String Child_Window3 = it3.next();
+		DriverManager.getDriverRef().switchTo().window(Child_Window3);
 
+
+		String Number_Incremented = ParentReceivedNumber.getText();
+		int Increse_Real_Parent_DashBoard_Number = Integer.parseInt(Number_Incremented);
+
+		if(Increse_Real_Parent_DashBoard_Number == Increse__Parent_DashBoard_Number) {
+			System.out.println("TestDone" + Increse_Real_Parent_DashBoard_Number);
+		}else {
+			Assert.fail("The dashboard is not updated");
+		} 
 
 	}
 

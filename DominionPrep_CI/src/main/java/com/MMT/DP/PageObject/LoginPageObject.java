@@ -1,9 +1,13 @@
 package com.MMT.DP.PageObject;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.Map;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import com.MMT.DP.DriverManegment.DriverManager;
 
 public class LoginPageObject {
@@ -25,6 +29,16 @@ public class LoginPageObject {
 	private static WebElement Forgot_Email_Field;
 
 
+	//DoE Login Assert
+	@FindBy( xpath = "//span[@id='usernamehoverbtn']" )
+	private static WebElement User_Button;
+	@FindBy( xpath = "//div[@class='col-xs-4 text-center']" )
+	private static WebElement Profile;
+	@FindBy( xpath = "//p[text()='Doe']" )
+	private static WebElement DOE;
+	
+	
+	
 
 	public LoginPageObject() {
 
@@ -37,6 +51,10 @@ public class LoginPageObject {
 		User_Name.sendKeys(map.get("Username"));
 		Password.sendKeys(map.get("Password"));
 		Login_Button.click();
+		User_Button.click();
+		Profile.click();
+		boolean profile_name = DOE.isDisplayed();
+		Assert.assertEquals(profile_name, true);
 
 	}
 

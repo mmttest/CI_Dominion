@@ -125,7 +125,7 @@ public class TeacherFormObject {
 	@FindBy (xpath = "//a[text()='Apply ']")
 	private static WebElement Apply ;
 	@FindBy (xpath = "//a[text()='Teacher Application']")
-	private static WebElement Parent_Application ;
+	private static WebElement Teacher_Application ;
 	@FindBy (xpath = "//a[text()='Login']")
 	private static WebElement Login_Application;
 
@@ -174,7 +174,7 @@ public class TeacherFormObject {
 
 
 		Apply.click();
-		Parent_Application.click();
+		Teacher_Application.click();
 		Set<String> Window_handel2 = DriverManager.getDriverRef().getWindowHandles();
 		Iterator<String> it2 =Window_handel2.iterator();
 		String Parent_Window2 = it2.next();

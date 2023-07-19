@@ -36,13 +36,12 @@ public class Parent_Form {
 	private static void FillupForm_Parent(HashMap<String,String> map) throws InterruptedException {
 		parentform.ParentFormSubmit(map);
 	}
-//TestNG
+	
 
 	@AfterMethod
-	private static void QuitDriver() {
-
-		DriverClass.TearDownMethod();
-
+	public void QuitDriver() {
+		DriverManager.getDriverRef().quit();
+		DriverManager.DriverUnload();
 	}
 
 

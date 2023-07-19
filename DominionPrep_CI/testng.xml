@@ -9,7 +9,7 @@
 	
   <test thread-count="5" name="Test">
     <classes>
-      <class name="TestCase.DoE_Login_Test"/>
+      <class name="TestCase.DoE_Functionality"/>
       <class name="TestCase.Parent_Form"/>
       <class name="TestCase.Teacher_Form"/>
     </classes>

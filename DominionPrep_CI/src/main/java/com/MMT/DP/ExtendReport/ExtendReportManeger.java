@@ -69,9 +69,7 @@ public class ExtendReportManeger extends DriverClass implements ITestListener{
 	public void onFinish(ITestContext context) {
 
 		extent.flush();
-		try { Desktop.getDesktop().browse(new File ("TestIndex.html").toURI()); }
-		catch (IOException e) { // TODO Auto-generated catch block
-			e.printStackTrace(); }
+
 		Extend_Thread.Extend_Unload();
 
 	}
