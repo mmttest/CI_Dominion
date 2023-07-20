@@ -160,8 +160,8 @@ public class TeacherFormObject {
 		String Parent_Window1 = it1.next();
 		String Child_Window1 = it1.next();
 		DriverManager.getDriverRef().switchTo().window(Child_Window1);
-		User_Name.sendKeys("doe@gmail.com");
-		Password.sendKeys("password@123");
+		User_Name.sendKeys(map.get("Username"));
+		Password.sendKeys(map.get("Password"));
 		Login_Button.click();
 
 		String NumberS = ParentReceivedNumber.getText();
