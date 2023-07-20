@@ -167,7 +167,7 @@ public class TeacherFormObject {
 		String NumberS = ParentReceivedNumber.getText();
 		Intitial_Teacher_DashBoard_Number = Integer.parseInt(NumberS);
 		Increse__Teacher_DashBoard_Number= Intitial_Teacher_DashBoard_Number+1;
-		System.out.println("The number is:- "+ Intitial_Teacher_DashBoard_Number);
+		System.out.println("The present Teacher number is:-  "+ Intitial_Teacher_DashBoard_Number);
 		DriverManager.getDriverRef().close();
 
 		DriverManager.getDriverRef().switchTo().window(Parent_Window1);
@@ -267,9 +267,9 @@ public class TeacherFormObject {
 		int Increse_Real_Parent_DashBoard_Number = Integer.parseInt(Number_Incremented);
 
 		if(Increse_Real_Parent_DashBoard_Number == Increse__Teacher_DashBoard_Number) {
-			System.out.println("TestDone" + Increse_Real_Parent_DashBoard_Number);
+			System.out.println("TestDone_New_Teacher_Number_is :-  " + Increse_Real_Parent_DashBoard_Number);
 		}else {
-			Assert.fail("The dashboard is not updated");
+			Assert.fail("   The dashboard is not updated for the Teacher  ");
 		} 
 
 	}

@@ -169,7 +169,7 @@ public class ParentFormObject {
 		String NumberS = ParentReceivedNumber.getText();
 		Intitial_Parent_DashBoard_Number = Integer.parseInt(NumberS);
 		Increse__Parent_DashBoard_Number= Intitial_Parent_DashBoard_Number+1;
-		System.out.println("The number is:- "+ Intitial_Parent_DashBoard_Number);
+		System.out.println("The present Parents number is:-  "+ Intitial_Parent_DashBoard_Number);
 		DriverManager.getDriverRef().close();
 
 		DriverManager.getDriverRef().switchTo().window(Parent_Window1);
@@ -261,9 +261,9 @@ public class ParentFormObject {
 		int Increse_Real_Parent_DashBoard_Number = Integer.parseInt(Number_Incremented);
 
 		if(Increse_Real_Parent_DashBoard_Number == Increse__Parent_DashBoard_Number) {
-			System.out.println("TestDone" + Increse_Real_Parent_DashBoard_Number);
+			System.out.println("TestDone_New_Parents_Number_is :-  " + Increse_Real_Parent_DashBoard_Number);
 		}else {
-			Assert.fail("The dashboard is not updated");
+			Assert.fail("   The dashboard is not updated for the Parents  ");
 		} 
 
 	}
