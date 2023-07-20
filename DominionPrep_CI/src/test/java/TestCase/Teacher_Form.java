@@ -26,7 +26,7 @@ public class Teacher_Form {
 
 	@DataProvider (name = "TeacherForm")
 	public Object[] StudentForm_Data() throws IOException{ 
-		Object data[] = ExcelData.Data("ParentForm");
+		Object data[] = ExcelData.Data("TeacherForm");
 		return data; }
 
 	@Test(dataProvider = "TeacherForm")
