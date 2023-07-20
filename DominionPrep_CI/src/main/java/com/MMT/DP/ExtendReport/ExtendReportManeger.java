@@ -3,9 +3,13 @@ package com.MMT.DP.ExtendReport;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
+import org.testng.IClass;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
+import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -18,7 +22,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.MMT.DP.DriverManegment.DriverClass;
 
 
-public class ExtendReportManeger extends DriverClass implements ITestListener{
+public class ExtendReportManeger extends DriverClass implements ITestListener {
 	private ExtentReports extent;
 	public ExtentTest test;
 	public ExtentSparkReporter spark;
@@ -66,7 +70,9 @@ public class ExtendReportManeger extends DriverClass implements ITestListener{
 	}
 
 	@Override
-	public void onFinish(ITestContext context) {
+	public void onFinish(ITestContext result) {
+		
+		
 
 		extent.flush();
 

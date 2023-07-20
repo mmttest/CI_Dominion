@@ -12,6 +12,7 @@ import com.MMT.DP.DriverManegment.DriverClass;
 import com.MMT.DP.DriverManegment.DriverManager;
 import com.MMT.DP.FrameWorkData.ExcelData;
 import com.MMT.DP.PageObject.TeacherFormObject;
+import org.testng.ITestResult;
 
 public class Teacher_Form {
 	static TeacherFormObject teacherform;
@@ -35,7 +36,10 @@ public class Teacher_Form {
 	}
 
 	@AfterMethod
-	public void QuitDriver() {
+	public void QuitDriver(ITestResult result) {
+		
+	      long a = result.getEndMillis()-result.getStartMillis();
+	      System.out.println("Time taken to run test is :"+a+" miliiseconds");
 		DriverManager.getDriverRef().quit();
 		DriverManager.DriverUnload();
 	}
