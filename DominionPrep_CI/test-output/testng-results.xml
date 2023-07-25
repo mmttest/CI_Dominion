@@ -2,38 +2,27 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-20T14:44:04 IST" name="Default suite" finished-at="2023-07-20T14:44:09 IST" duration-ms="5304">
+  <suite started-at="2023-07-24T10:44:27 IST" name="Default suite" finished-at="2023-07-24T10:44:38 IST" duration-ms="10811">
     <groups>
     </groups>
-    <test started-at="2023-07-20T14:44:04 IST" name="Default test" finished-at="2023-07-20T14:44:09 IST" duration-ms="5304">
-      <class name="TestCase.DoE_Functionality">
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@19e4653c]" started-at="2023-07-20T14:44:04 IST" name="InitialMethod" finished-at="2023-07-20T14:44:07 IST" duration-ms="2798" status="PASS">
+    <test started-at="2023-07-24T10:44:27 IST" name="Default test" finished-at="2023-07-24T10:44:38 IST" duration-ms="10811">
+      <class name="TestCase.Student_Form">
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.Student_Form@1cf6d1be]" started-at="2023-07-24T10:44:28 IST" name="InitialMethod" finished-at="2023-07-24T10:44:31 IST" duration-ms="3507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InitialMethod -->
-        <test-method signature="DOE_Accept_Parent(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@19e4653c]" started-at="2023-07-20T14:44:07 IST" name="DOE_Accept_Parent" data-provider="DoeLogin" finished-at="2023-07-20T14:44:09 IST" duration-ms="1720" status="PASS">
+        <test-method signature="FillupForm_Student(java.util.HashMap)[pri:0, instance:TestCase.Student_Form@1cf6d1be]" started-at="2023-07-24T10:44:31 IST" name="FillupForm_Student" data-provider="StudentForm" finished-at="2023-07-24T10:44:38 IST" duration-ms="6777" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Username=doe_001@yopmail.com , Password=password@123}]]>
+                <![CDATA[{Email=Test_Student1_20@yopmail.com, DoE_Username=doe_001@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DOE_Accept_Parent -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@19e4653c]" started-at="2023-07-20T14:44:09 IST" name="QuitDriver" finished-at="2023-07-20T14:44:09 IST" duration-ms="252" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=DOE_Accept_Parent status=SUCCESS method=DoE_Functionality.DOE_Accept_Parent(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@19e4653c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
-      </class> <!-- TestCase.DoE_Functionality -->
+        </test-method> <!-- FillupForm_Student -->
+      </class> <!-- TestCase.Student_Form -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -46,7 +46,7 @@ public class LoginPageObject {
 	}
 
 
-	public void Valid_Login(Map <String, String> map) {
+	public void DoE_Valid_Login(Map <String, String> map) {
 		
 		User_Name.sendKeys(map.get("Username"));
 		Password.sendKeys(map.get("Password"));

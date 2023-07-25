@@ -1,5 +1,6 @@
 package TestCase;
 
+import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -25,7 +26,7 @@ public class DoE_Functionality {
 	@BeforeMethod
 	private static void InitialMethod() throws Throwable {
 
-		DriverClass.Initialization("MAIN_URL");
+		DriverClass.Initialization("Marketing_URL");
 		DoE_Login = new LoginPageObject();
 		DoE_Fucntionality = new DoEFunctionalityObject();
 
@@ -33,23 +34,54 @@ public class DoE_Functionality {
 
 	// Data provider
 	@DataProvider (name = "DoeLogin")
-	public Object[] StudentForm_Data() throws IOException{ 
+	public Object[] Login_Data() throws IOException{ 
 		Object data[] = ExcelData.Data("DoE_Login");
 		return data; }
 
 
-	@Test(dataProvider = "DoeLogin" )
-	private static void DOE_Accept_Parent(HashMap<String,String> map) throws InterruptedException {
 
-		DoE_Login.Valid_Login(map);
 
+
+	// Data provider
+	@DataProvider (name = "ParentReceivedList")
+	public Object[] Parent_Data() throws IOException{ 
+		Object data[] = ExcelData.Data("ParentForm");
+		return data; }
+	
+	
+	
+	
+	// Data provider
+	@DataProvider (name = "TeacherReceivedList")
+	public Object[] Teacher_Data() throws IOException{ 
+		Object data[] = ExcelData.Data("TeacherForm");
+		return data; }
+	
+	
+	
+	
+	
+	
+	@Test(dataProvider = "ParentReceivedList" )
+	private static void DOE_Accept_List_Parent(HashMap<String,String> map) throws InterruptedException {
+
+		DoE_Fucntionality.Parent_Received_List(map);
 	}
+	
+	
+	@Test(dataProvider = "TeacherReceivedList" )
+	private static void DOE_Accept_List_Teacher (HashMap<String,String> map) throws InterruptedException {
+
+		DoE_Fucntionality.Teacher_Received_List(map);
+	}
+	
+	
 
 	@AfterMethod
 	public void QuitDriver(ITestResult result) {
-		
-	      long a = result.getEndMillis()-result.getStartMillis();
-	      System.out.println("Time taken to run test is :"+a+" miliiseconds");
+
+		long a = result.getEndMillis()-result.getStartMillis();
+		System.out.println("Time taken to run test is :"+a+" miliiseconds");
 		DriverManager.getDriverRef().quit();
 		DriverManager.DriverUnload();
 	}

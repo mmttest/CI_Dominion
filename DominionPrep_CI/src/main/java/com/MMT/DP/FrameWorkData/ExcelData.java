@@ -36,6 +36,7 @@ public class ExcelData {
 			for (int k = 0; k < sheet.getRow(0).getLastCellNum(); k++) {
 				map.put(sheet.getRow(0).getCell(k).toString(), sheet.getRow(i+1).getCell(k).toString());
 				data[i] = map;
+				
 			}
 
 		}

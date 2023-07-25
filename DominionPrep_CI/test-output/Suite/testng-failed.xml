@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestCase.Teacher_Form">
+      <class name="TestCase.DoE_Functionality">
         <methods>
-          <include name="QuitDriver"/>
-          <include name="FillupForm_Teacher" invocation-numbers="0"/>
           <include name="InitialMethod"/>
+          <include name="QuitDriver"/>
+          <include name="DOE_Accept_List_Teacher" invocation-numbers="0"/>
         </methods>
-      </class> <!-- TestCase.Teacher_Form -->
+      </class> <!-- TestCase.DoE_Functionality -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
