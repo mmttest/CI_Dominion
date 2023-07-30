@@ -28,7 +28,6 @@ public class Student_Form {
 
 
 
-
 	@DataProvider (name = "StudentForm")
 	public Object[] StudentForm_Data() throws IOException{ 
 		Object data[] = ExcelData.Data("StudentForm");
@@ -39,10 +38,6 @@ public class Student_Form {
 	private static void FillupForm_Student(HashMap<String,String> map) throws InterruptedException {
 		Studentform.StudentFormSubmit(map);
 	}
-
-
-
-
 
 
 

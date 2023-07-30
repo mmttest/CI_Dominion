@@ -8,11 +8,88 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">10,811</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">143,140</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestCase.Student_Form</td><td><a href="#m0">FillupForm_Student</a></td><td rowspan="1">1690175671618</td><td rowspan="1">6777</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">TestCase.DoE_Functionality</td><td><a href="#m0">DOE_Accept_List_Parent</a></td><td rowspan="1">1690522058571</td><td rowspan="1">9697</td></tr><tr class="failedeven"><td><a href="#m1">DOE_Accept_List_Student</a></td><td rowspan="1">1690522071753</td><td rowspan="1">11612</td></tr><tr class="failedeven"><td><a href="#m2">DOE_Accept_List_Teacher</a></td><td rowspan="1">1690522087005</td><td rowspan="1">9668</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">TestCase.DoE_Functionality</td><td><a href="#m3">DOE_Received_List_Parent</a></td><td rowspan="1">1690522100219</td><td rowspan="1">3056</td></tr><tr class="passedeven"><td><a href="#m4">DOE_Received_List_Student</a></td><td rowspan="1">1690522106810</td><td rowspan="1">3300</td></tr><tr class="passedeven"><td><a href="#m5">DOE_Received_List_Teacher</a></td><td rowspan="1">1690522113513</td><td rowspan="1">3145</td></tr><tr class="passedodd"><td rowspan="1">TestCase.Parent_Form</td><td><a href="#m6">FillupForm_Parent</a></td><td rowspan="1">1690521980212</td><td rowspan="1">21279</td></tr><tr class="passedeven"><td rowspan="1">TestCase.Student_Form</td><td><a href="#m7">FillupForm_Student</a></td><td rowspan="1">1690522030350</td><td rowspan="1">24469</td></tr><tr class="passedodd"><td rowspan="1">TestCase.Teacher_Form</td><td><a href="#m8">FillupForm_Teacher</a></td><td rowspan="1">1690522005338</td><td rowspan="1">21388</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">TestCase.Student_Form#FillupForm_Student</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Student1_20@yopmail.com, DoE_Username=doe_001@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">TestCase.DoE_Functionality#DOE_Accept_List_Parent</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Parent1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://stage.magicmindtechnologies.com/dominion_prep_school/parents/approved&quot; style=&quot;margin-left: 0px;&quot;&gt;...&lt;/a&gt; is not clickable at point (110, 266). Other element would receive the click: &lt;div id=&quot;myModal320&quot; class=&quot;modal fade in&quot; role=&quot;dialog&quot; style=&quot;margin-top: 150px; display: block;&quot; aria-hidden=&quot;false&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=115.0.5790.110)
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f715dcc077c081d86b0ad3c9ea6b6bb, clickElement {id=0201686A49C32D333A8637BB9050633B_element_475}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Sakas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63429}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63429/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0f715dcc077c081d86b0ad3c9ea6b6bb)] -&gt; xpath: //span[text()=&apos;Parent Approved List&apos;]// parent::a]
+Session ID: 0f715dcc077c081d86b0ad3c9ea6b6bb
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at com.MMT.DP.PageObject.DoEFunctionalityObject.Parent_Accept_Test(DoEFunctionalityObject.java:232)
+	at TestCase.DoE_Functionality.DOE_Accept_List_Parent(DoE_Functionality.java:78)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestCase.DoE_Functionality#DOE_Accept_List_Student</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Student1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://stage.magicmindtechnologies.com/dominion_prep_school/student/approved&quot; style=&quot;margin-left: 0px;&quot;&gt;...&lt;/a&gt; is not clickable at point (110, 345). Other element would receive the click: &lt;div id=&quot;myModal273&quot; class=&quot;modal fade in&quot; role=&quot;dialog&quot; style=&quot;margin-top: 150px; display: block;&quot; aria-hidden=&quot;false&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=115.0.5790.110)
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0f86e7fa518f6b643e581e1902bcd37d, clickElement {id=8F3BF3803DE59C0CB0D68A22393A4510_element_572}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Sakas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63475}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63475/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (0f86e7fa518f6b643e581e1902bcd37d)] -&gt; xpath: //span[text()=&apos;Student Approved List&apos;]// parent::a]
+Session ID: 0f86e7fa518f6b643e581e1902bcd37d
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at com.MMT.DP.PageObject.DoEFunctionalityObject.Student_Accept_Test(DoEFunctionalityObject.java:284)
+	at TestCase.DoE_Functionality.DOE_Accept_List_Student(DoE_Functionality.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestCase.DoE_Functionality#DOE_Accept_List_Teacher</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Teacher1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;https://stage.magicmindtechnologies.com/dominion_prep_school/teacher/approved&quot; style=&quot;margin-left: 0px;&quot;&gt;...&lt;/a&gt; is not clickable at point (110, 306). Other element would receive the click: &lt;div id=&quot;myModal259&quot; class=&quot;modal fade in&quot; role=&quot;dialog&quot; style=&quot;margin-top: 150px; display: block;&quot; aria-hidden=&quot;false&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=115.0.5790.110)
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [75b4e866f116994554f46c68fcb0cf56, clickElement {id=F48840FB2379BCDC9A75EB2FBD39D58A_element_488}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Sakas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63530}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63530/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (75b4e866f116994554f46c68fcb0cf56)] -&gt; xpath: //span[text()=&apos;Teacher Approved List&apos;]// parent::a]
+Session ID: 75b4e866f116994554f46c68fcb0cf56
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
+	at com.MMT.DP.PageObject.DoEFunctionalityObject.Teacher_Accept_Test(DoEFunctionalityObject.java:335)
+	at TestCase.DoE_Functionality.DOE_Accept_List_Teacher(DoE_Functionality.java:94)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestCase.DoE_Functionality#DOE_Received_List_Parent</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Parent1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">TestCase.DoE_Functionality#DOE_Received_List_Student</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Student1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">TestCase.DoE_Functionality#DOE_Received_List_Teacher</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Teacher1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">TestCase.Parent_Form#FillupForm_Parent</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Parent1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">TestCase.Student_Form#FillupForm_Student</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Student1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">TestCase.Teacher_Form#FillupForm_Teacher</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Teacher1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -40,14 +40,11 @@ public class DoE_Functionality {
 
 
 
-
-
 	// Data provider
 	@DataProvider (name = "ParentReceivedList")
 	public Object[] Parent_Data() throws IOException{ 
 		Object data[] = ExcelData.Data("ParentForm");
 		return data; }
-	
 	
 	
 	
@@ -58,22 +55,66 @@ public class DoE_Functionality {
 		return data; }
 	
 	
+	// Data provider
+	@DataProvider (name = "StudentReceivedList")
+	public Object[] Student_Data() throws IOException{ 
+		Object data[] = ExcelData.Data("StudentForm");
+		return data; }
+	
+	
 	
 	
 	
 	
 	@Test(dataProvider = "ParentReceivedList" )
-	private static void DOE_Accept_List_Parent(HashMap<String,String> map) throws InterruptedException {
+	private static void DOE_Received_List_Parent(HashMap<String,String> map) throws InterruptedException {
 
 		DoE_Fucntionality.Parent_Received_List(map);
 	}
 	
+	@Test(dataProvider = "ParentReceivedList" )
+	private static void DOE_Accept_List_Parent(HashMap<String,String> map) throws InterruptedException {
+
+		DoE_Fucntionality.Parent_Accept_Test(map);
+	}
+	
+	
+	
+	
+	
+	@Test(dataProvider = "TeacherReceivedList" )
+	private static void DOE_Received_List_Teacher (HashMap<String,String> map) throws InterruptedException {
+
+		DoE_Fucntionality.Teacher_Received_List(map);
+	}
 	
 	@Test(dataProvider = "TeacherReceivedList" )
 	private static void DOE_Accept_List_Teacher (HashMap<String,String> map) throws InterruptedException {
 
-		DoE_Fucntionality.Teacher_Received_List(map);
+		DoE_Fucntionality.Teacher_Accept_Test(map);
 	}
+	
+	
+	
+	
+	@Test(dataProvider = "StudentReceivedList" )
+	private static void DOE_Received_List_Student (HashMap<String,String> map) throws InterruptedException {
+
+		DoE_Fucntionality.Student_Received_List(map);
+	}
+	
+	
+	@Test(dataProvider = "StudentReceivedList" )
+	private static void DOE_Accept_List_Student (HashMap<String,String> map) throws InterruptedException {
+
+		DoE_Fucntionality.Student_Accept_Test(map);
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 
