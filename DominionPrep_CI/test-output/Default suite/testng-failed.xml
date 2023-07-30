@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCase.Student_Form">
+      <class name="TestCase.Parent_Form">
         <methods>
-          <include name="FillupForm_Student" invocation-numbers="0"/>
-          <include name="InitialMethod"/>
           <include name="QuitDriver"/>
+          <include name="InitialMethod"/>
+          <include name="FillupForm_Parent"/>
         </methods>
-      </class> <!-- TestCase.Student_Form -->
+      </class> <!-- TestCase.Parent_Form -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

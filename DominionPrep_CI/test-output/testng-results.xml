@@ -1,475 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="6" failed="3" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-28T10:56:13 IST" name="Suite" finished-at="2023-07-28T10:58:36 IST" duration-ms="143140">
+  <suite started-at="2023-07-30T19:30:53 IST" name="Default suite" finished-at="2023-07-30T19:30:54 IST" duration-ms="689">
     <groups>
     </groups>
-    <test started-at="2023-07-28T10:56:13 IST" name="Test" finished-at="2023-07-28T10:58:36 IST" duration-ms="143140">
-      <class name="TestCase.Teacher_Form">
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.Teacher_Form@6c284af]" started-at="2023-07-28T10:56:41 IST" name="InitialMethod" finished-at="2023-07-28T10:56:45 IST" duration-ms="3448" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InitialMethod -->
-        <test-method signature="FillupForm_Teacher(java.util.HashMap)[pri:0, instance:TestCase.Teacher_Form@6c284af]" started-at="2023-07-28T10:56:45 IST" name="FillupForm_Teacher" data-provider="TeacherForm" finished-at="2023-07-28T10:57:06 IST" duration-ms="21388" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=Test_Teacher1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- FillupForm_Teacher -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.Teacher_Form@6c284af]" started-at="2023-07-28T10:57:06 IST" name="QuitDriver" finished-at="2023-07-28T10:57:07 IST" duration-ms="313" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=FillupForm_Teacher status=SUCCESS method=Teacher_Form.FillupForm_Teacher(java.util.HashMap)[pri:0, instance:TestCase.Teacher_Form@6c284af] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
-      </class> <!-- TestCase.Teacher_Form -->
+    <test started-at="2023-07-30T19:30:53 IST" name="Default test" finished-at="2023-07-30T19:30:54 IST" duration-ms="689">
       <class name="TestCase.Parent_Form">
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.Parent_Form@548d708a]" started-at="2023-07-28T10:56:14 IST" name="InitialMethod" finished-at="2023-07-28T10:56:20 IST" duration-ms="5664" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InitialMethod -->
-        <test-method signature="FillupForm_Parent(java.util.HashMap)[pri:0, instance:TestCase.Parent_Form@548d708a]" started-at="2023-07-28T10:56:20 IST" name="FillupForm_Parent" data-provider="ParentForm" finished-at="2023-07-28T10:56:41 IST" duration-ms="21279" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=Test_Parent1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="FillupForm_Parent(java.util.HashMap)[pri:0, instance:TestCase.Parent_Form@19e4653c]" started-at="2023-07-30T19:30:54 IST" name="FillupForm_Parent" data-provider="ParentForm" finished-at="2023-07-30T19:30:54 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.toString()" because the return value of "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.toString()" because the return value of "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" is null
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:803)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:924)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.toString()" because the return value of "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" is null
+at com.MMT.DP.FrameWorkData.ExcelData.Data(ExcelData.java:37)
+at TestCase.Parent_Form.StudentForm_Data(Parent_Form.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FillupForm_Parent -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.Parent_Form@548d708a]" started-at="2023-07-28T10:56:41 IST" name="QuitDriver" finished-at="2023-07-28T10:56:41 IST" duration-ms="330" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=FillupForm_Parent status=SUCCESS method=Parent_Form.FillupForm_Parent(java.util.HashMap)[pri:0, instance:TestCase.Parent_Form@548d708a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
       </class> <!-- TestCase.Parent_Form -->
-      <class name="TestCase.Student_Form">
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.Student_Form@5890e879]" started-at="2023-07-28T10:57:07 IST" name="InitialMethod" finished-at="2023-07-28T10:57:10 IST" duration-ms="3255" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InitialMethod -->
-        <test-method signature="FillupForm_Student(java.util.HashMap)[pri:0, instance:TestCase.Student_Form@5890e879]" started-at="2023-07-28T10:57:10 IST" name="FillupForm_Student" data-provider="StudentForm" finished-at="2023-07-28T10:57:34 IST" duration-ms="24469" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=Test_Student1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- FillupForm_Student -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.Student_Form@5890e879]" started-at="2023-07-28T10:57:34 IST" name="QuitDriver" finished-at="2023-07-28T10:57:35 IST" duration-ms="337" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=FillupForm_Student status=SUCCESS method=Student_Form.FillupForm_Student(java.util.HashMap)[pri:0, instance:TestCase.Student_Form@5890e879] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
-      </class> <!-- TestCase.Student_Form -->
-      <class name="TestCase.DoE_Functionality">
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:57:35 IST" name="InitialMethod" finished-at="2023-07-28T10:57:38 IST" duration-ms="3360" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InitialMethod -->
-        <test-method signature="DOE_Accept_List_Parent(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:57:38 IST" name="DOE_Accept_List_Parent" data-provider="ParentReceivedList" finished-at="2023-07-28T10:57:48 IST" duration-ms="9697" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=Test_Parent1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="https://stage.magicmindtechnologies.com/dominion_prep_school/parents/approved" style="margin-left: 0px;">...</a> is not clickable at point (110, 266). Other element would receive the click: <div id="myModal320" class="modal fade in" role="dialog" style="margin-top: 150px; display: block;" aria-hidden="false">...</div>
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f715dcc077c081d86b0ad3c9ea6b6bb, clickElement {id=0201686A49C32D333A8637BB9050633B_element_475}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Sakas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63429}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63429/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0f715dcc077c081d86b0ad3c9ea6b6bb)] -> xpath: //span[text()='Parent Approved List']// parent::a]
-Session ID: 0f715dcc077c081d86b0ad3c9ea6b6bb]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="https://stage.magicmindtechnologies.com/dominion_prep_school/parents/approved" style="margin-left: 0px;">...</a> is not clickable at point (110, 266). Other element would receive the click: <div id="myModal320" class="modal fade in" role="dialog" style="margin-top: 150px; display: block;" aria-hidden="false">...</div>
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f715dcc077c081d86b0ad3c9ea6b6bb, clickElement {id=0201686A49C32D333A8637BB9050633B_element_475}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Sakas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63429}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63429/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0f715dcc077c081d86b0ad3c9ea6b6bb)] -> xpath: //span[text()='Parent Approved List']// parent::a]
-Session ID: 0f715dcc077c081d86b0ad3c9ea6b6bb
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-at com.MMT.DP.PageObject.DoEFunctionalityObject.Parent_Accept_Test(DoEFunctionalityObject.java:232)
-at TestCase.DoE_Functionality.DOE_Accept_List_Parent(DoE_Functionality.java:78)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DOE_Accept_List_Parent -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:57:48 IST" name="QuitDriver" finished-at="2023-07-28T10:57:48 IST" duration-ms="284" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=DOE_Accept_List_Parent status=FAILURE method=DoE_Functionality.DOE_Accept_List_Parent(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:57:48 IST" name="InitialMethod" finished-at="2023-07-28T10:57:51 IST" duration-ms="3155" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InitialMethod -->
-        <test-method signature="DOE_Accept_List_Student(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:57:51 IST" name="DOE_Accept_List_Student" data-provider="StudentReceivedList" finished-at="2023-07-28T10:58:03 IST" duration-ms="11612" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=Test_Student1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="https://stage.magicmindtechnologies.com/dominion_prep_school/student/approved" style="margin-left: 0px;">...</a> is not clickable at point (110, 345). Other element would receive the click: <div id="myModal273" class="modal fade in" role="dialog" style="margin-top: 150px; display: block;" aria-hidden="false">...</div>
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f86e7fa518f6b643e581e1902bcd37d, clickElement {id=8F3BF3803DE59C0CB0D68A22393A4510_element_572}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Sakas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63475}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63475/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0f86e7fa518f6b643e581e1902bcd37d)] -> xpath: //span[text()='Student Approved List']// parent::a]
-Session ID: 0f86e7fa518f6b643e581e1902bcd37d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="https://stage.magicmindtechnologies.com/dominion_prep_school/student/approved" style="margin-left: 0px;">...</a> is not clickable at point (110, 345). Other element would receive the click: <div id="myModal273" class="modal fade in" role="dialog" style="margin-top: 150px; display: block;" aria-hidden="false">...</div>
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f86e7fa518f6b643e581e1902bcd37d, clickElement {id=8F3BF3803DE59C0CB0D68A22393A4510_element_572}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Sakas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63475}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63475/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (0f86e7fa518f6b643e581e1902bcd37d)] -> xpath: //span[text()='Student Approved List']// parent::a]
-Session ID: 0f86e7fa518f6b643e581e1902bcd37d
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-at com.MMT.DP.PageObject.DoEFunctionalityObject.Student_Accept_Test(DoEFunctionalityObject.java:284)
-at TestCase.DoE_Functionality.DOE_Accept_List_Student(DoE_Functionality.java:110)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DOE_Accept_List_Student -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:03 IST" name="QuitDriver" finished-at="2023-07-28T10:58:03 IST" duration-ms="319" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=DOE_Accept_List_Student status=FAILURE method=DoE_Functionality.DOE_Accept_List_Student(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:03 IST" name="InitialMethod" finished-at="2023-07-28T10:58:07 IST" duration-ms="3270" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InitialMethod -->
-        <test-method signature="DOE_Accept_List_Teacher(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:07 IST" name="DOE_Accept_List_Teacher" data-provider="TeacherReceivedList" finished-at="2023-07-28T10:58:16 IST" duration-ms="9668" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=Test_Teacher1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <a href="https://stage.magicmindtechnologies.com/dominion_prep_school/teacher/approved" style="margin-left: 0px;">...</a> is not clickable at point (110, 306). Other element would receive the click: <div id="myModal259" class="modal fade in" role="dialog" style="margin-top: 150px; display: block;" aria-hidden="false">...</div>
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [75b4e866f116994554f46c68fcb0cf56, clickElement {id=F48840FB2379BCDC9A75EB2FBD39D58A_element_488}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Sakas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63530}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63530/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (75b4e866f116994554f46c68fcb0cf56)] -> xpath: //span[text()='Teacher Approved List']// parent::a]
-Session ID: 75b4e866f116994554f46c68fcb0cf56]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="https://stage.magicmindtechnologies.com/dominion_prep_school/teacher/approved" style="margin-left: 0px;">...</a> is not clickable at point (110, 306). Other element would receive the click: <div id="myModal259" class="modal fade in" role="dialog" style="margin-top: 150px; display: block;" aria-hidden="false">...</div>
-  (Session info: chrome=115.0.5790.110)
-Build info: version: '4.8.3', revision: 'e5e76298c3'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [75b4e866f116994554f46c68fcb0cf56, clickElement {id=F48840FB2379BCDC9A75EB2FBD39D58A_element_488}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\Sakas\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63530}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63530/devtoo..., se:cdpVersion: 115.0.5790.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (75b4e866f116994554f46c68fcb0cf56)] -> xpath: //span[text()='Teacher Approved List']// parent::a]
-Session ID: 75b4e866f116994554f46c68fcb0cf56
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)
-at com.MMT.DP.PageObject.DoEFunctionalityObject.Teacher_Accept_Test(DoEFunctionalityObject.java:335)
-at TestCase.DoE_Functionality.DOE_Accept_List_Teacher(DoE_Functionality.java:94)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DOE_Accept_List_Teacher -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:16 IST" name="QuitDriver" finished-at="2023-07-28T10:58:16 IST" duration-ms="321" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=DOE_Accept_List_Teacher status=FAILURE method=DoE_Functionality.DOE_Accept_List_Teacher(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:17 IST" name="InitialMethod" finished-at="2023-07-28T10:58:20 IST" duration-ms="3182" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InitialMethod -->
-        <test-method signature="DOE_Received_List_Parent(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:20 IST" name="DOE_Received_List_Parent" data-provider="ParentReceivedList" finished-at="2023-07-28T10:58:23 IST" duration-ms="3056" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=Test_Parent1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DOE_Received_List_Parent -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:23 IST" name="QuitDriver" finished-at="2023-07-28T10:58:23 IST" duration-ms="253" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=DOE_Received_List_Parent status=SUCCESS method=DoE_Functionality.DOE_Received_List_Parent(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:23 IST" name="InitialMethod" finished-at="2023-07-28T10:58:26 IST" duration-ms="3226" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InitialMethod -->
-        <test-method signature="DOE_Received_List_Student(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:26 IST" name="DOE_Received_List_Student" data-provider="StudentReceivedList" finished-at="2023-07-28T10:58:30 IST" duration-ms="3300" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=Test_Student1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DOE_Received_List_Student -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:30 IST" name="QuitDriver" finished-at="2023-07-28T10:58:30 IST" duration-ms="267" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=DOE_Received_List_Student status=SUCCESS method=DoE_Functionality.DOE_Received_List_Student(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
-        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:30 IST" name="InitialMethod" finished-at="2023-07-28T10:58:33 IST" duration-ms="3083" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InitialMethod -->
-        <test-method signature="DOE_Received_List_Teacher(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:33 IST" name="DOE_Received_List_Teacher" data-provider="TeacherReceivedList" finished-at="2023-07-28T10:58:36 IST" duration-ms="3145" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Email=Test_Teacher1_30@yopmail.com, DoE_Username=doe_mmt@yopmail.com , FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DOE_Received_List_Teacher -->
-        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@6440112d]" started-at="2023-07-28T10:58:36 IST" name="QuitDriver" finished-at="2023-07-28T10:58:36 IST" duration-ms="314" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=DOE_Received_List_Teacher status=SUCCESS method=DoE_Functionality.DOE_Received_List_Teacher(java.util.HashMap)[pri:0, instance:TestCase.DoE_Functionality@6440112d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- QuitDriver -->
-      </class> <!-- TestCase.DoE_Functionality -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
