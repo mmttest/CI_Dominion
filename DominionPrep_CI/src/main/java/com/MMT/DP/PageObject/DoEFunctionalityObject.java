@@ -249,7 +249,7 @@ public class DoEFunctionalityObject {
 		int Decrese_Real_Parent_DashBoard_Number = Integer.parseInt(Number_Decremented);
 
 		if(Decrese_Real_Parent_DashBoard_Number == Decrese__Parent_DashBoard_Number) {
-			System.out.println("The parent is accepted, the new parent number in the dashboard is  :-  " + Decrese_Real_Parent_DashBoard_Number);
+			System.out.println("The parent is accepted, now the dashboard received list will decrese, the new parent number in the dashboard is  :-  " + Decrese_Real_Parent_DashBoard_Number);
 		}else {
 			Assert.fail("   The dashboard is not updated for the Parents  ");
 		}
@@ -305,7 +305,7 @@ public class DoEFunctionalityObject {
 		int Decrese_Real_Student_DashBoard_Number = Integer.parseInt(Number_Decremented);
 
 		if(Decrese_Real_Student_DashBoard_Number == Decrese__Student_DashBoard_Number) {
-			System.out.println("The Student is accepted, the new Student number in the dashboard is :-  " + Decrese_Real_Student_DashBoard_Number);
+			System.out.println("The Student is accepted, now the dashboard received list will decrese, the new Student number in the dashboard is :-  " + Decrese_Real_Student_DashBoard_Number);
 		}else {
 			Assert.fail("   The dashboard is not updated for the Student  ");
 		}
@@ -360,7 +360,7 @@ public class DoEFunctionalityObject {
 		int Decrese_Real_Teacher_DashBoard_Number = Integer.parseInt(Number_Incremented);
 
 		if(Decrese_Real_Teacher_DashBoard_Number == Decrese__Teacher_DashBoard_Number) {
-			System.out.println("The Teacher is accepted, the new Teacher number in the dashboard is :-  " + Decrese_Real_Teacher_DashBoard_Number);
+			System.out.println("The Teacher is accepted, now the dashboard received list will decrese,  the new Teacher number in the dashboard is :-  " + Decrese_Real_Teacher_DashBoard_Number);
 		}else {
 			Assert.fail("   The dashboard is not updated for the Teacher  ");
 		}
