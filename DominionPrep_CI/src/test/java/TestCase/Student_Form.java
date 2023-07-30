@@ -39,7 +39,6 @@ public class Student_Form {
 		Studentform.StudentFormSubmit(map);
 	}
 
-// test
 
 
 	@AfterMethod

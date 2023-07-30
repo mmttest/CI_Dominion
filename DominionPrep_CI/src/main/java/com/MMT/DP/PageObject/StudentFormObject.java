@@ -159,13 +159,14 @@ public class StudentFormObject {
 		String Parent_Window2 = it2.next();
 		String Child_Window2 = it2.next();
 		DriverManager.getDriverRef().switchTo().window(Child_Window2);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		User_Name.sendKeys("parents@gmail.com");
 		Password.sendKeys("password@123");
 		Login_Button.click();
 		Student_Tab.click();
 		Actions AddChild_Action = new Actions(DriverManager.getDriverRef());
 		AddChild_Action.moveToElement(Student_Add_Button).build().perform();
+		Thread.sleep(3000);
 		Student_Add_Button.click();
 		Student_Name.sendKeys(map.get("Name"));
 		// If academic Year not selected By default

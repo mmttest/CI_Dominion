@@ -66,13 +66,13 @@ public class DoE_Functionality {
 	
 	
 	
-	@Test(dataProvider = "ParentReceivedList" )
+	@Test(priority = 1 , dataProvider = "ParentReceivedList", enabled = true )
 	private static void DOE_Received_List_Parent(HashMap<String,String> map) throws InterruptedException {
 
 		DoE_Fucntionality.Parent_Received_List(map);
 	}
 	
-	@Test(dataProvider = "ParentReceivedList" )
+	@Test(priority = 2, dataProvider = "ParentReceivedList" , enabled = true)
 	private static void DOE_Accept_List_Parent(HashMap<String,String> map) throws InterruptedException {
 
 		DoE_Fucntionality.Parent_Accept_Test(map);
@@ -81,14 +81,13 @@ public class DoE_Functionality {
 	
 	
 	
-	
-	@Test(dataProvider = "TeacherReceivedList" )
+	@Test(priority = 3, dataProvider = "TeacherReceivedList" , enabled = true )
 	private static void DOE_Received_List_Teacher (HashMap<String,String> map) throws InterruptedException {
 
 		DoE_Fucntionality.Teacher_Received_List(map);
 	}
 	
-	@Test(dataProvider = "TeacherReceivedList" )
+	@Test(priority = 4, dataProvider = "TeacherReceivedList" , enabled = true )
 	private static void DOE_Accept_List_Teacher (HashMap<String,String> map) throws InterruptedException {
 
 		DoE_Fucntionality.Teacher_Accept_Test(map);
@@ -97,27 +96,21 @@ public class DoE_Functionality {
 	
 	
 	
-	@Test(dataProvider = "StudentReceivedList" )
+	@Test(priority = 5, dataProvider = "StudentReceivedList" , enabled = true )
 	private static void DOE_Received_List_Student (HashMap<String,String> map) throws InterruptedException {
 
 		DoE_Fucntionality.Student_Received_List(map);
 	}
 	
 	
-	@Test(dataProvider = "StudentReceivedList" )
+	@Test(priority = 6 , dataProvider = "StudentReceivedList" , enabled = true)
 	private static void DOE_Accept_List_Student (HashMap<String,String> map) throws InterruptedException {
 
 		DoE_Fucntionality.Student_Accept_Test(map);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
+	
+	
 	@AfterMethod
 	public void QuitDriver(ITestResult result) {
 

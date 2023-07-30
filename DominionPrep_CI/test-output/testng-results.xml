@@ -1,63 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-30T19:30:53 IST" name="Default suite" finished-at="2023-07-30T19:30:54 IST" duration-ms="689">
+  <suite started-at="2023-07-30T22:14:00 IST" name="Suite" finished-at="2023-07-30T22:17:37 IST" duration-ms="217121">
     <groups>
     </groups>
-    <test started-at="2023-07-30T19:30:53 IST" name="Default test" finished-at="2023-07-30T19:30:54 IST" duration-ms="689">
+    <test started-at="2023-07-30T22:14:00 IST" name="Test" finished-at="2023-07-30T22:17:37 IST" duration-ms="217121">
+      <class name="TestCase.Teacher_Form">
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.Teacher_Form@2b40ff9c]" started-at="2023-07-30T22:14:38 IST" name="InitialMethod" finished-at="2023-07-30T22:14:44 IST" duration-ms="6573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialMethod -->
+        <test-method signature="FillupForm_Teacher(java.util.HashMap)[pri:0, instance:TestCase.Teacher_Form@2b40ff9c]" started-at="2023-07-30T22:14:44 IST" name="FillupForm_Teacher" data-provider="TeacherForm" finished-at="2023-07-30T22:15:12 IST" duration-ms="27261" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=Test_Teacher1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillupForm_Teacher -->
+        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.Teacher_Form@2b40ff9c]" started-at="2023-07-30T22:15:12 IST" name="QuitDriver" finished-at="2023-07-30T22:15:12 IST" duration-ms="253" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FillupForm_Teacher status=SUCCESS method=Teacher_Form.FillupForm_Teacher(java.util.HashMap)[pri:0, instance:TestCase.Teacher_Form@2b40ff9c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitDriver -->
+      </class> <!-- TestCase.Teacher_Form -->
       <class name="TestCase.Parent_Form">
-        <test-method signature="FillupForm_Parent(java.util.HashMap)[pri:0, instance:TestCase.Parent_Form@19e4653c]" started-at="2023-07-30T19:30:54 IST" name="FillupForm_Parent" data-provider="ParentForm" finished-at="2023-07-30T19:30:54 IST" duration-ms="0" status="FAIL">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.toString()" because the return value of "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.toString()" because the return value of "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" is null
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:803)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
-at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:924)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.toString()" because the return value of "org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)" is null
-at com.MMT.DP.FrameWorkData.ExcelData.Data(ExcelData.java:37)
-at TestCase.Parent_Form.StudentForm_Data(Parent_Form.java:34)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
-... 25 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.Parent_Form@1c5920df]" started-at="2023-07-30T22:14:01 IST" name="InitialMethod" finished-at="2023-07-30T22:14:11 IST" duration-ms="9954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialMethod -->
+        <test-method signature="FillupForm_Parent(java.util.HashMap)[pri:0, instance:TestCase.Parent_Form@1c5920df]" started-at="2023-07-30T22:14:11 IST" name="FillupForm_Parent" data-provider="ParentForm" finished-at="2023-07-30T22:14:37 IST" duration-ms="26509" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=Test_Parent1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FillupForm_Parent -->
+        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.Parent_Form@1c5920df]" started-at="2023-07-30T22:14:37 IST" name="QuitDriver" finished-at="2023-07-30T22:14:38 IST" duration-ms="364" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FillupForm_Parent status=SUCCESS method=Parent_Form.FillupForm_Parent(java.util.HashMap)[pri:0, instance:TestCase.Parent_Form@1c5920df] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitDriver -->
       </class> <!-- TestCase.Parent_Form -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="TestCase.Student_Form">
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.Student_Form@3e08ff24]" started-at="2023-07-30T22:15:12 IST" name="InitialMethod" finished-at="2023-07-30T22:15:16 IST" duration-ms="3504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialMethod -->
+        <test-method signature="FillupForm_Student(java.util.HashMap)[pri:0, instance:TestCase.Student_Form@3e08ff24]" started-at="2023-07-30T22:15:16 IST" name="FillupForm_Student" data-provider="StudentForm" finished-at="2023-07-30T22:15:50 IST" duration-ms="34718" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=Test_Student1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillupForm_Student -->
+        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.Student_Form@3e08ff24]" started-at="2023-07-30T22:15:50 IST" name="QuitDriver" finished-at="2023-07-30T22:15:50 IST" duration-ms="257" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FillupForm_Student status=SUCCESS method=Student_Form.FillupForm_Student(java.util.HashMap)[pri:0, instance:TestCase.Student_Form@3e08ff24] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitDriver -->
+      </class> <!-- TestCase.Student_Form -->
+      <class name="TestCase.DoE_Functionality">
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:15:51 IST" name="InitialMethod" finished-at="2023-07-30T22:15:55 IST" duration-ms="4061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialMethod -->
+        <test-method signature="DOE_Received_List_Parent(java.util.HashMap)[pri:1, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:15:55 IST" name="DOE_Received_List_Parent" data-provider="ParentReceivedList" finished-at="2023-07-30T22:15:59 IST" duration-ms="4788" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=Test_Parent1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DOE_Received_List_Parent -->
+        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:15:59 IST" name="QuitDriver" finished-at="2023-07-30T22:16:00 IST" duration-ms="246" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DOE_Received_List_Parent status=SUCCESS method=DoE_Functionality.DOE_Received_List_Parent(java.util.HashMap)[pri:1, instance:TestCase.DoE_Functionality@4d1c005e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitDriver -->
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:00 IST" name="InitialMethod" finished-at="2023-07-30T22:16:03 IST" duration-ms="3790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialMethod -->
+        <test-method signature="DOE_Accept_List_Parent(java.util.HashMap)[pri:2, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:03 IST" name="DOE_Accept_List_Parent" data-provider="ParentReceivedList" finished-at="2023-07-30T22:16:25 IST" duration-ms="21856" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=Test_Parent1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DOE_Accept_List_Parent -->
+        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:25 IST" name="QuitDriver" finished-at="2023-07-30T22:16:26 IST" duration-ms="251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DOE_Accept_List_Parent status=SUCCESS method=DoE_Functionality.DOE_Accept_List_Parent(java.util.HashMap)[pri:2, instance:TestCase.DoE_Functionality@4d1c005e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitDriver -->
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:26 IST" name="InitialMethod" finished-at="2023-07-30T22:16:29 IST" duration-ms="3372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialMethod -->
+        <test-method signature="DOE_Received_List_Teacher(java.util.HashMap)[pri:3, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:29 IST" name="DOE_Received_List_Teacher" data-provider="TeacherReceivedList" finished-at="2023-07-30T22:16:33 IST" duration-ms="4365" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=Test_Teacher1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DOE_Received_List_Teacher -->
+        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:33 IST" name="QuitDriver" finished-at="2023-07-30T22:16:34 IST" duration-ms="192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DOE_Received_List_Teacher status=SUCCESS method=DoE_Functionality.DOE_Received_List_Teacher(java.util.HashMap)[pri:3, instance:TestCase.DoE_Functionality@4d1c005e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitDriver -->
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:34 IST" name="InitialMethod" finished-at="2023-07-30T22:16:37 IST" duration-ms="3766" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialMethod -->
+        <test-method signature="DOE_Accept_List_Teacher(java.util.HashMap)[pri:4, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:37 IST" name="DOE_Accept_List_Teacher" data-provider="TeacherReceivedList" finished-at="2023-07-30T22:16:57 IST" duration-ms="19357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=Test_Teacher1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DOE_Accept_List_Teacher -->
+        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:57 IST" name="QuitDriver" finished-at="2023-07-30T22:16:57 IST" duration-ms="177" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DOE_Accept_List_Teacher status=SUCCESS method=DoE_Functionality.DOE_Accept_List_Teacher(java.util.HashMap)[pri:4, instance:TestCase.DoE_Functionality@4d1c005e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitDriver -->
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:16:57 IST" name="InitialMethod" finished-at="2023-07-30T22:17:02 IST" duration-ms="4985" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialMethod -->
+        <test-method signature="DOE_Received_List_Student(java.util.HashMap)[pri:5, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:17:02 IST" name="DOE_Received_List_Student" data-provider="StudentReceivedList" finished-at="2023-07-30T22:17:10 IST" duration-ms="8035" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=Test_Student1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DOE_Received_List_Student -->
+        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:17:10 IST" name="QuitDriver" finished-at="2023-07-30T22:17:10 IST" duration-ms="221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DOE_Received_List_Student status=SUCCESS method=DoE_Functionality.DOE_Received_List_Student(java.util.HashMap)[pri:5, instance:TestCase.DoE_Functionality@4d1c005e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitDriver -->
+        <test-method is-config="true" signature="InitialMethod()[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:17:10 IST" name="InitialMethod" finished-at="2023-07-30T22:17:16 IST" duration-ms="5265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitialMethod -->
+        <test-method signature="DOE_Accept_List_Student(java.util.HashMap)[pri:6, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:17:16 IST" name="DOE_Accept_List_Student" data-provider="StudentReceivedList" finished-at="2023-07-30T22:17:37 IST" duration-ms="21423" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email=Test_Student1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DOE_Accept_List_Student -->
+        <test-method is-config="true" signature="QuitDriver(org.testng.ITestResult)[pri:0, instance:TestCase.DoE_Functionality@4d1c005e]" started-at="2023-07-30T22:17:37 IST" name="QuitDriver" finished-at="2023-07-30T22:17:37 IST" duration-ms="246" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DOE_Accept_List_Student status=SUCCESS method=DoE_Functionality.DOE_Accept_List_Student(java.util.HashMap)[pri:6, instance:TestCase.DoE_Functionality@4d1c005e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- QuitDriver -->
+      </class> <!-- TestCase.DoE_Functionality -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

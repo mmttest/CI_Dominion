@@ -13,8 +13,7 @@ import com.MMT.DP.DriverManegment.DriverManager;
 
 public class DoEFunctionalityObject {
 
-	static int Intitial_Parent_DashBoard_Number;
-	static int Increse__Parent_DashBoard_Number;
+
 
 
 	@FindBy( xpath = "//input[@placeholder='Enter your email or username']" )
@@ -124,10 +123,13 @@ public class DoEFunctionalityObject {
 
 
 	static int Intitial_Student_DashBoard_Number;
-	static int Increse__Student_DashBoard_Number;
+	static int Decrese__Student_DashBoard_Number;
 	
 	static int Intitial_Teacher_DashBoard_Number;
-	static int Increse__Teacher_DashBoard_Number;
+	static int Decrese__Teacher_DashBoard_Number;
+	
+	static int Intitial_Parent_DashBoard_Number;
+	static int Decrese__Parent_DashBoard_Number;
 
 
 	public DoEFunctionalityObject() {
@@ -177,7 +179,7 @@ public class DoEFunctionalityObject {
 	}
 
 
-	public  void Student_Received_List(Map <String, String> map) {
+	public  void Student_Received_List(Map <String, String> map) throws InterruptedException {
 
 		Login_Application.click();
 		Set<String> Window_handel1 = DriverManager.getDriverRef().getWindowHandles();
@@ -189,7 +191,9 @@ public class DoEFunctionalityObject {
 		Password.sendKeys(map.get("DoE_Password"));
 		Login_Button.click();
 		Student_Tab.click();
+		Thread.sleep(2000);
 		Student_Received_List.click();
+		Thread.sleep(2000);
 		String Added_parent = Received_Student.getText();
 		Assert.assertEquals(Added_parent, map.get("Email"));
 
@@ -211,14 +215,14 @@ public class DoEFunctionalityObject {
 		Login_Button.click();
 		String NumberS = ParentReceivedNumber.getText();
 		Intitial_Parent_DashBoard_Number = Integer.parseInt(NumberS);
-		Increse__Parent_DashBoard_Number= Intitial_Parent_DashBoard_Number+1;
-		System.out.println("The present Parents number is:-  "+ Intitial_Parent_DashBoard_Number);
+		Decrese__Parent_DashBoard_Number= Intitial_Parent_DashBoard_Number-1;
+		System.out.println("Before accept by DoE,  Parents number is:-  "+ Intitial_Parent_DashBoard_Number);
 		Profile.click();
 		Logout_Portal.click();
 		LogOut_Pop_Button.click();
 		DriverManager.getDriverRef().close();
 		DriverManager.getDriverRef().switchTo().window(Parent_Window1);
-		Yes_button.click();
+	
 		Login_Application.click();
 		Set<String> Window_handel2 = DriverManager.getDriverRef().getWindowHandles();
 		Iterator<String> it2 =Window_handel2.iterator();
@@ -230,19 +234,22 @@ public class DoEFunctionalityObject {
 		Login_Button.click();
 		Parent_Tab.click();
 		Parent_Received_List.click();
+		Thread.sleep(1000);
 		Accept_button.click();
-		
-		Thread.sleep(3000);
+		Thread.sleep(1000);
+		Yes_button.click();
+		Thread.sleep(5000);
 		Parent_Approved_List.click();
+		Thread.sleep(5000);
 		String approvedParent = Approved_Parent.getText();
 		Assert.assertEquals(approvedParent, map.get("Email"));
 		Dashboard.click();
 
-		String Number_Incremented = ParentReceivedNumber.getText();
-		int Increse_Real_Parent_DashBoard_Number = Integer.parseInt(Number_Incremented);
+		String Number_Decremented = ParentReceivedNumber.getText();
+		int Decrese_Real_Parent_DashBoard_Number = Integer.parseInt(Number_Decremented);
 
-		if(Increse_Real_Parent_DashBoard_Number == Increse__Parent_DashBoard_Number) {
-			System.out.println("TestDone_New_Parents_Number_is :-  " + Increse_Real_Parent_DashBoard_Number);
+		if(Decrese_Real_Parent_DashBoard_Number == Decrese__Parent_DashBoard_Number) {
+			System.out.println("The parent is accepted, the new parent number in the dashboard is  :-  " + Decrese_Real_Parent_DashBoard_Number);
 		}else {
 			Assert.fail("   The dashboard is not updated for the Parents  ");
 		}
@@ -264,8 +271,8 @@ public class DoEFunctionalityObject {
 		Login_Button.click();
 		String NumberS = StudentReceivedNumber.getText();
 		Intitial_Student_DashBoard_Number = Integer.parseInt(NumberS);
-		Increse__Student_DashBoard_Number= Intitial_Student_DashBoard_Number+1;
-		System.out.println("The Student Parents number is:-  "+ Intitial_Student_DashBoard_Number);
+		Decrese__Student_DashBoard_Number= Intitial_Student_DashBoard_Number-1;
+		System.out.println("Before accepted by DoE, the student number is:-  "+ Intitial_Student_DashBoard_Number);
 		Profile.click();
 		Logout_Portal.click();
 		LogOut_Pop_Button.click();
@@ -283,19 +290,22 @@ public class DoEFunctionalityObject {
 		Login_Button.click();
 		Student_Tab.click();
 		Student_Received_List.click();
+		Thread.sleep(1000);
 		Accept_button.click();
+		Thread.sleep(1000);
 		Yes_button.click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		Student_Approved_List.click();
+		Thread.sleep(5000);
 		String approvedStudent = Approved_Student.getText();
 		Assert.assertEquals(approvedStudent, map.get("Email"));
 		Dashboard.click();
 
-		String Number_Incremented = StudentReceivedNumber.getText();
-		int Increse_Real_Student_DashBoard_Number = Integer.parseInt(Number_Incremented);
+		String Number_Decremented = StudentReceivedNumber.getText();
+		int Decrese_Real_Student_DashBoard_Number = Integer.parseInt(Number_Decremented);
 
-		if(Increse_Real_Student_DashBoard_Number == Increse__Student_DashBoard_Number) {
-			System.out.println("TestDone_New_Student_Number_is :-  " + Increse_Real_Student_DashBoard_Number);
+		if(Decrese_Real_Student_DashBoard_Number == Decrese__Student_DashBoard_Number) {
+			System.out.println("The Student is accepted, the new Student number in the dashboard is :-  " + Decrese_Real_Student_DashBoard_Number);
 		}else {
 			Assert.fail("   The dashboard is not updated for the Student  ");
 		}
@@ -316,8 +326,8 @@ public class DoEFunctionalityObject {
 		Login_Button.click();
 		String NumberS = TeacherReceivedNumber.getText();
 		Intitial_Teacher_DashBoard_Number = Integer.parseInt(NumberS);
-		Increse__Teacher_DashBoard_Number= Intitial_Teacher_DashBoard_Number+1;
-		System.out.println("The present Teacher number is:-  "+ Intitial_Teacher_DashBoard_Number);
+		Decrese__Teacher_DashBoard_Number= Intitial_Teacher_DashBoard_Number-1;
+		System.out.println("Before Accept by DoE, the Teacher  number is:-  "+ Intitial_Teacher_DashBoard_Number);
 		Profile.click();
 		Logout_Portal.click();
 		LogOut_Pop_Button.click();
@@ -335,19 +345,22 @@ public class DoEFunctionalityObject {
 		Login_Button.click();
 		Teacher_Tab.click();
 		Teacher_Received_List.click();
+		Thread.sleep(1000);
 		Accept_button.click();
+		Thread.sleep(1000);
 		Yes_button.click();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		Teacher_Approved_List.click();
+		Thread.sleep(4000);
 		String approvedTeacher = Approved_Teacher.getText();
 		Assert.assertEquals(approvedTeacher, map.get("Email"));
 		Dashboard.click();
 
 		String Number_Incremented = TeacherReceivedNumber.getText();
-		int Increse_Real_Teacher_DashBoard_Number = Integer.parseInt(Number_Incremented);
+		int Decrese_Real_Teacher_DashBoard_Number = Integer.parseInt(Number_Incremented);
 
-		if(Increse_Real_Teacher_DashBoard_Number == Increse__Teacher_DashBoard_Number) {
-			System.out.println("TestDone_New_Teacher_Number_is :-  " + Increse_Real_Teacher_DashBoard_Number);
+		if(Decrese_Real_Teacher_DashBoard_Number == Decrese__Teacher_DashBoard_Number) {
+			System.out.println("The Teacher is accepted, the new Teacher number in the dashboard is :-  " + Decrese_Real_Teacher_DashBoard_Number);
 		}else {
 			Assert.fail("   The dashboard is not updated for the Teacher  ");
 		}

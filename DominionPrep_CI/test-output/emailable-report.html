@@ -8,49 +8,19 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">689</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">217,121</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCase.Parent_Form</td><td><a href="#m0">FillupForm_Parent</a></td><td rowspan="1">1690725654130</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">TestCase.DoE_Functionality</td><td><a href="#m0">DOE_Accept_List_Parent</a></td><td rowspan="1">1690735563962</td><td rowspan="1">21856</td></tr><tr class="passedeven"><td><a href="#m1">DOE_Accept_List_Student</a></td><td rowspan="1">1690735636014</td><td rowspan="1">21423</td></tr><tr class="passedeven"><td><a href="#m2">DOE_Accept_List_Teacher</a></td><td rowspan="1">1690735597879</td><td rowspan="1">19357</td></tr><tr class="passedeven"><td><a href="#m3">DOE_Received_List_Parent</a></td><td rowspan="1">1690735555092</td><td rowspan="1">4788</td></tr><tr class="passedeven"><td><a href="#m4">DOE_Received_List_Student</a></td><td rowspan="1">1690735622457</td><td rowspan="1">8035</td></tr><tr class="passedeven"><td><a href="#m5">DOE_Received_List_Teacher</a></td><td rowspan="1">1690735589492</td><td rowspan="1">4365</td></tr><tr class="passedodd"><td rowspan="1">TestCase.Parent_Form</td><td><a href="#m6">FillupForm_Parent</a></td><td rowspan="1">1690735451353</td><td rowspan="1">26509</td></tr><tr class="passedeven"><td rowspan="1">TestCase.Student_Form</td><td><a href="#m7">FillupForm_Student</a></td><td rowspan="1">1690735516007</td><td rowspan="1">34718</td></tr><tr class="passedodd"><td rowspan="1">TestCase.Teacher_Form</td><td><a href="#m8">FillupForm_Teacher</a></td><td rowspan="1">1690735484923</td><td rowspan="1">27261</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">TestCase.Parent_Form#FillupForm_Parent</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFCell.toString()&quot; because the return value of &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; is null
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:803)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
-	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
-	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:924)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFCell.toString()&quot; because the return value of &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; is null
-	at com.MMT.DP.FrameWorkData.ExcelData.Data(ExcelData.java:37)
-	at TestCase.Parent_Form.StudentForm_Data(Parent_Form.java:34)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
-	... 25 more
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">TestCase.DoE_Functionality#DOE_Accept_List_Parent</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Parent1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestCase.DoE_Functionality#DOE_Accept_List_Student</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Student1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">TestCase.DoE_Functionality#DOE_Accept_List_Teacher</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Teacher1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">TestCase.DoE_Functionality#DOE_Received_List_Parent</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Parent1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">TestCase.DoE_Functionality#DOE_Received_List_Student</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Student1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">TestCase.DoE_Functionality#DOE_Received_List_Teacher</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Teacher1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">TestCase.Parent_Form#FillupForm_Parent</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Parent1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">TestCase.Student_Form#FillupForm_Student</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Student1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, PrimaryNumber=0987654321, DoE_Password=password@123, Name=Test_Student, Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">TestCase.Teacher_Form#FillupForm_Teacher</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Email=Test_Teacher1_40@yopmail.com, DoE_Username=doe_mmt@yopmail.com, FirstName=Test, PrimaryNumber=0987654321, LastName=LastName, DoE_Password=password@123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

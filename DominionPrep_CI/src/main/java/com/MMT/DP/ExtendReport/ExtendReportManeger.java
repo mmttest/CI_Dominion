@@ -67,6 +67,15 @@ public class ExtendReportManeger extends DriverClass implements ITestListener {
 		spark.config().setTheme(Theme.DARK);
 		spark.config().setDocumentTitle("com.MMT.Dominion_Prep");
 		spark.config().setReportName("Dominion prep Test Report");
+		extent.setSystemInfo("NAME", "Dominion Prep");
+		extent.setSystemInfo("os", "Windows");
+		extent.setSystemInfo("Project", "Dominion Prep CI");
+		extent.setSystemInfo("Browser", "Chrome");
+		extent.setSystemInfo("Test Conducted By", "Akash Saha (QA)");
+
+
+
+
 	}
 
 	@Override
