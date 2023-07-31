@@ -166,7 +166,7 @@ public class StudentFormObject {
 		Student_Tab.click();
 		Actions AddChild_Action = new Actions(DriverManager.getDriverRef());
 		AddChild_Action.moveToElement(Student_Add_Button).build().perform();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		Student_Add_Button.click();
 		Student_Name.sendKeys(map.get("Name"));
 		// If academic Year not selected By default
