@@ -11,7 +11,7 @@ import org.testng.Assert;
 
 import com.MMT.DP.DriverManegment.DriverManager;
 
-public class DoEFunctionalityObject {
+public class Form_AcceptObject {
 
 
 
@@ -106,7 +106,7 @@ public class DoEFunctionalityObject {
 	private static WebElement Reject_button;
 	@FindBy (xpath="(//button[@class='yes-button accept'])[1]")
 	private static WebElement Yes_button;
-	
+
 
 	// DoE banner
 
@@ -120,19 +120,39 @@ public class DoEFunctionalityObject {
 	@FindBy (xpath="//span[text()='Dashboard']// parent::a")
 	private static WebElement Dashboard;
 
+	// Admin dashboard 
+	@FindBy (xpath="//p[contains(text(),'Student')]//parent::div/h3")
+	private static WebElement Admin_StudentReceivedNumber;
+	@FindBy (xpath="//p[contains(text(),'Teacher')]//parent::div/h3")
+	private static WebElement Admin_TeacherReceivedNumber;
+	@FindBy (xpath="//p[contains(text(),'Parent')]//parent::div/h3")
+	private static WebElement Admin_ParentReceivedNumber;
+	@FindBy (xpath="//p[contains(text(),'Notice')]//parent::div/h3")
+	private static WebElement Admin_NoticeReceivedNumber;
+
+
 
 
 	static int Intitial_Student_DashBoard_Number;
 	static int Decrese__Student_DashBoard_Number;
-	
+
 	static int Intitial_Teacher_DashBoard_Number;
 	static int Decrese__Teacher_DashBoard_Number;
-	
+
 	static int Intitial_Parent_DashBoard_Number;
 	static int Decrese__Parent_DashBoard_Number;
 
+	static int Admin_Intitial_Student_DashBoard_Number;
+	static int Admin_Increse__Student_DashBoard_Number;
 
-	public DoEFunctionalityObject() {
+	static int Admin_Intitial_Parent_DashBoard_Number;
+	static int Admin_Increse__Parent_DashBoard_Number;
+
+	static int Admin_Intitial_Teacher_DashBoard_Number;
+	static int Admin_Increse__Teacher_DashBoard_Number;
+
+
+	public Form_AcceptObject() {
 		PageFactory.initElements(DriverManager.getDriverRef(),this);
 	}
 
@@ -220,9 +240,24 @@ public class DoEFunctionalityObject {
 		Profile.click();
 		Logout_Portal.click();
 		LogOut_Pop_Button.click();
+
+
+
+		//Admin dashboard number check
+		User_Name.sendKeys(map.get("Admin_Username"));
+		Password.sendKeys(map.get("Admin_Password"));
+		Login_Button.click();
+		String Admin_Parent_Number = Admin_ParentReceivedNumber.getText();
+		Admin_Intitial_Parent_DashBoard_Number = Integer.parseInt(Admin_Parent_Number);
+		Admin_Increse__Parent_DashBoard_Number= Admin_Intitial_Parent_DashBoard_Number+1;
+		System.out.println("The Parent number in Admin is:-  "+ Admin_Intitial_Parent_DashBoard_Number);
+		Profile.click();
+		Logout_Portal.click();
+		LogOut_Pop_Button.click();
+
 		DriverManager.getDriverRef().close();
 		DriverManager.getDriverRef().switchTo().window(Parent_Window1);
-	
+
 		Login_Application.click();
 		Set<String> Window_handel2 = DriverManager.getDriverRef().getWindowHandles();
 		Iterator<String> it2 =Window_handel2.iterator();
@@ -254,6 +289,23 @@ public class DoEFunctionalityObject {
 			Assert.fail("   The dashboard is not updated for the Parents  ");
 		}
 
+		Profile.click();
+		Logout_Portal.click();
+		LogOut_Pop_Button.click();
+		Thread.sleep(2000);
+		// Admin Dashboard check
+		User_Name.sendKeys(map.get("Admin_Username"));
+		Password.sendKeys(map.get("Admin_Password"));
+		Login_Button.click();
+		String Admin_Number_Incremented = Admin_ParentReceivedNumber.getText();
+		int Admin_Increse_Real_Parent_DashBoard_Number = Integer.parseInt(Admin_Number_Incremented);
+
+		if(Admin_Increse_Real_Parent_DashBoard_Number == Admin_Increse__Parent_DashBoard_Number) {
+			System.out.println("TestDone New Parent Number in Admin Dashboard is :-  " + Admin_Increse_Real_Parent_DashBoard_Number);
+		}else {
+			Assert.fail("   The dashboard is not updated for the Parent in Admin dashboard  ");
+		} 
+
 	}
 
 
@@ -276,6 +328,20 @@ public class DoEFunctionalityObject {
 		Profile.click();
 		Logout_Portal.click();
 		LogOut_Pop_Button.click();
+
+		//Admin dashboard number check
+		User_Name.sendKeys(map.get("Admin_Username"));
+		Password.sendKeys(map.get("Admin_Password"));
+		Login_Button.click();
+		String Admin_Student_Number = Admin_StudentReceivedNumber.getText();
+		Admin_Intitial_Student_DashBoard_Number = Integer.parseInt(Admin_Student_Number);
+		Admin_Increse__Parent_DashBoard_Number= Admin_Intitial_Student_DashBoard_Number+1;
+		System.out.println("The Student number in Admin is:-  "+ Admin_Intitial_Student_DashBoard_Number);
+		Profile.click();
+		Logout_Portal.click();
+		LogOut_Pop_Button.click();
+
+
 		DriverManager.getDriverRef().close();
 		DriverManager.getDriverRef().switchTo().window(Parent_Window1);
 
@@ -310,8 +376,29 @@ public class DoEFunctionalityObject {
 			Assert.fail("   The dashboard is not updated for the Student  ");
 		}
 
+		Profile.click();
+		Logout_Portal.click();
+		LogOut_Pop_Button.click();
+		Thread.sleep(2000);
+		// Admin Dashboard check
+		User_Name.sendKeys(map.get("Admin_Username"));
+		Password.sendKeys(map.get("Admin_Password"));
+		Login_Button.click();
+		String Admin_Number_Incremented = Admin_StudentReceivedNumber.getText();
+		int Admin_Increse_Real_Student_DashBoard_Number = Integer.parseInt(Admin_Number_Incremented);
+
+		if(Admin_Increse_Real_Student_DashBoard_Number == Admin_Increse__Student_DashBoard_Number) {
+			System.out.println("TestDone New Student Number in Admin Dashboard is :-  " + Admin_Increse_Real_Student_DashBoard_Number);
+		}else {
+			Assert.fail("   The dashboard is not updated for the Student in Admin dashboard  ");
+		} 
+
+
+
+
+
 	}
-	
+
 	public  void Teacher_Accept_Test(Map <String, String> map) throws InterruptedException {
 
 
@@ -331,6 +418,19 @@ public class DoEFunctionalityObject {
 		Profile.click();
 		Logout_Portal.click();
 		LogOut_Pop_Button.click();
+
+		//Admin dashboard number check
+		User_Name.sendKeys(map.get("Admin_Username"));
+		Password.sendKeys(map.get("Admin_Password"));
+		Login_Button.click();
+		String Admin_Teacher_Number = Admin_TeacherReceivedNumber.getText();
+		Admin_Intitial_Teacher_DashBoard_Number = Integer.parseInt(Admin_Teacher_Number);
+		Admin_Increse__Teacher_DashBoard_Number= Admin_Intitial_Teacher_DashBoard_Number+1;
+		System.out.println("The Teacher number in Admin is:-  "+ Admin_Intitial_Teacher_DashBoard_Number);
+		Profile.click();
+		Logout_Portal.click();
+		LogOut_Pop_Button.click();
+
 		DriverManager.getDriverRef().close();
 		DriverManager.getDriverRef().switchTo().window(Parent_Window1);
 
@@ -364,6 +464,25 @@ public class DoEFunctionalityObject {
 		}else {
 			Assert.fail("   The dashboard is not updated for the Teacher  ");
 		}
+
+		Profile.click();
+		Logout_Portal.click();
+		LogOut_Pop_Button.click();
+		Thread.sleep(2000);
+		// Admin Dashboard check
+		User_Name.sendKeys(map.get("Admin_Username"));
+		Password.sendKeys(map.get("Admin_Password"));
+		Login_Button.click();
+		String Admin_Number_Incremented = Admin_TeacherReceivedNumber.getText();
+		int Admin_Increse_Real_Teacher_DashBoard_Number = Integer.parseInt(Admin_Number_Incremented);
+
+		if(Admin_Increse_Real_Teacher_DashBoard_Number == Admin_Increse__Student_DashBoard_Number) {
+			System.out.println("TestDone New Teacher Number in Admin Dashboard is :-  " + Admin_Increse_Real_Teacher_DashBoard_Number);
+		}else {
+			Assert.fail("   The dashboard is not updated for the Teacher in Admin dashboard  ");
+		} 
+
+
 
 	}
 

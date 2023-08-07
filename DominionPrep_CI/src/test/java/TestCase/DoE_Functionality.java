@@ -13,14 +13,14 @@ import org.testng.annotations.Test;
 import com.MMT.DP.DriverManegment.DriverClass;
 import com.MMT.DP.DriverManegment.DriverManager;
 import com.MMT.DP.FrameWorkData.ExcelData;
-import com.MMT.DP.PageObject.DoEFunctionalityObject;
+import com.MMT.DP.PageObject.Form_AcceptObject;
 import com.MMT.DP.PageObject.LoginPageObject;
 
 public class DoE_Functionality {
 
 
 	static LoginPageObject DoE_Login;
-	static DoEFunctionalityObject DoE_Fucntionality;
+	static Form_AcceptObject Form_Accept_Object;
 
 
 	@BeforeMethod
@@ -28,7 +28,7 @@ public class DoE_Functionality {
 
 		DriverClass.Initialization("Marketing_URL");
 		DoE_Login = new LoginPageObject();
-		DoE_Fucntionality = new DoEFunctionalityObject();
+		Form_Accept_Object = new Form_AcceptObject();
 
 	}
 
@@ -69,13 +69,13 @@ public class DoE_Functionality {
 	@Test(priority = 1 , dataProvider = "ParentReceivedList", enabled = true )
 	private static void DOE_Received_List_Parent(HashMap<String,String> map) throws InterruptedException {
 
-		DoE_Fucntionality.Parent_Received_List(map);
+		Form_Accept_Object.Parent_Received_List(map);
 	}
 	
 	@Test(priority = 2, dataProvider = "ParentReceivedList" , enabled = true)
 	private static void DOE_Accept_List_Parent(HashMap<String,String> map) throws InterruptedException {
 
-		DoE_Fucntionality.Parent_Accept_Test(map);
+		Form_Accept_Object.Parent_Accept_Test(map);
 	}
 	
 	
@@ -84,13 +84,13 @@ public class DoE_Functionality {
 	@Test(priority = 3, dataProvider = "TeacherReceivedList" , enabled = true )
 	private static void DOE_Received_List_Teacher (HashMap<String,String> map) throws InterruptedException {
 
-		DoE_Fucntionality.Teacher_Received_List(map);
+		Form_Accept_Object.Teacher_Received_List(map);
 	}
 	
 	@Test(priority = 4, dataProvider = "TeacherReceivedList" , enabled = true )
 	private static void DOE_Accept_List_Teacher (HashMap<String,String> map) throws InterruptedException {
 
-		DoE_Fucntionality.Teacher_Accept_Test(map);
+		Form_Accept_Object.Teacher_Accept_Test(map);
 	}
 	
 	
@@ -99,14 +99,14 @@ public class DoE_Functionality {
 	@Test(priority = 5, dataProvider = "StudentReceivedList" , enabled = true )
 	private static void DOE_Received_List_Student (HashMap<String,String> map) throws InterruptedException {
 
-		DoE_Fucntionality.Student_Received_List(map);
+		Form_Accept_Object.Student_Received_List(map);
 	}
 	
 	
 	@Test(priority = 6 , dataProvider = "StudentReceivedList" , enabled = true)
 	private static void DOE_Accept_List_Student (HashMap<String,String> map) throws InterruptedException {
 
-		DoE_Fucntionality.Student_Accept_Test(map);
+		Form_Accept_Object.Student_Accept_Test(map);
 	}
 
 	

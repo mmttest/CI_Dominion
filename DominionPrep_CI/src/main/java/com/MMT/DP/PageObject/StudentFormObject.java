@@ -42,7 +42,7 @@ public class StudentFormObject {
 	// DoE banner
 	
 	@FindBy (xpath="//p[contains(text(),'Students Received')]//parent::div/h3")
-	private static WebElement StudentReceivedNumber;
+	private static WebElement DoE_StudentReceivedNumber;
 	
 
 	// Student Add
@@ -121,10 +121,15 @@ public class StudentFormObject {
 	@FindBy (xpath = "//a[@class=\"btn-logout\"]")
 	private static WebElement LogOut_Pop_Button;
 	
+
 	
 	
-	static int Intitial_Student_DashBoard_Number;
-	static int Increse__Student_DashBoard_Number;
+	
+	static int DoE_Intitial_Student_DashBoard_Number;
+	static int DoE_Increse__Student_DashBoard_Number;
+	
+	static int Admin_Intitial_Student_DashBoard_Number;
+	static int Admin_Increse__Student_DashBoard_Number;
 	
 
 	public StudentFormObject() {
@@ -141,16 +146,19 @@ public class StudentFormObject {
 		String Parent_Window1 = it1.next();
 		String Child_Window1 = it1.next();
 		DriverManager.getDriverRef().switchTo().window(Child_Window1);
+		//DoE dashboard number check
 		User_Name.sendKeys(map.get("DoE_Username"));
 		Password.sendKeys(map.get("DoE_Password"));
 		Login_Button.click();
-		String NumberS = StudentReceivedNumber.getText();
-		Intitial_Student_DashBoard_Number = Integer.parseInt(NumberS);
-		Increse__Student_DashBoard_Number= Intitial_Student_DashBoard_Number+1;
-		System.out.println("The present Student number is:-  "+ Intitial_Student_DashBoard_Number);
+		String DoE_Student_Number = DoE_StudentReceivedNumber.getText();
+		DoE_Intitial_Student_DashBoard_Number = Integer.parseInt(DoE_Student_Number);
+		DoE_Increse__Student_DashBoard_Number= DoE_Intitial_Student_DashBoard_Number+1;
+		System.out.println("The present Student number in DoE is:-  "+ DoE_Intitial_Student_DashBoard_Number);
 		Profile.click();
 		Logout_Portal.click();
 		LogOut_Pop_Button.click();
+		Thread.sleep(2000);
+		
 		DriverManager.getDriverRef().close();
 		DriverManager.getDriverRef().switchTo().window(Parent_Window1);
 		Login_Application.click();
@@ -198,6 +206,8 @@ public class StudentFormObject {
 		Semester_Dropdown.click(); 
 		Semester_Select.click(); Grade_CheckBox.click();
 		All_Course_CheckBox.click(); 
+		JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriverRef();
+		js.executeScript("window.scrollBy(0,200)", "");
 		Submit.click();
 		Actions Hover_Added_Name = new Actions(DriverManager.getDriverRef());
 		Hover_Added_Name.moveToElement(Student_Added_Hover).build().perform(); 
@@ -214,17 +224,19 @@ public class StudentFormObject {
 		String Parent_Window3 = it3.next();
 		String Child_Window3 = it3.next();
 		DriverManager.getDriverRef().switchTo().window(Child_Window3);
+		// DoE dashboard check
 		User_Name.sendKeys(map.get("DoE_Username"));
 		Password.sendKeys(map.get("DoE_Password"));
 		Login_Button.click();
-		String Number_Incremented = StudentReceivedNumber.getText();
-		int Increse_Real_Parent_DashBoard_Number = Integer.parseInt(Number_Incremented);
+		String DoE_Number_Incremented = DoE_StudentReceivedNumber.getText();
+		int DoE_Increse_Real_Parent_DashBoard_Number = Integer.parseInt(DoE_Number_Incremented);
 
-		if(Increse_Real_Parent_DashBoard_Number == Increse__Student_DashBoard_Number) {
-			System.out.println("TestDone_New_Student_Number_is :-  " + Increse_Real_Parent_DashBoard_Number);
+		if(DoE_Increse_Real_Parent_DashBoard_Number == DoE_Increse__Student_DashBoard_Number) {
+			System.out.println("TestDone New Student Number in DoE Dashboard is :-  " + DoE_Increse_Real_Parent_DashBoard_Number);
 		}else {
-			Assert.fail("   The dashboard is not updated for the Student  ");
+			Assert.fail("   The dashboard is not updated for the Student in DoE dashboard  ");
 		} 
+		
 		
 		
 
